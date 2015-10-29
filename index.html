@@ -17,7 +17,7 @@
     </div>
     <div id="table"></div>
     <script>
-      MP.api.people({where: 'properties["Purchases"] > 50&limit=10'}).done(function(results) {
+      MP.api.people({where: 'properties["Purchases"] > 50'}).done(function(results) {
     console.log(results.values());
 });
     </script>
