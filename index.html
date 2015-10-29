@@ -17,7 +17,12 @@
     </div>
     <div id="table"></div>
     <script>
-      var eventSelect = $('#eventSelect').MPEventSelect();
+      MP.api.people({where: 'properties["Purchases"] > 50&limit=10'}).done(function(results) {
+    console.log(results.values());
+});
+    </script>
+    <script>
+/*      var eventSelect = $('#eventSelect').MPEventSelect();
       var propSelect  = $('#propSelect').MPPropertySelect();
       var dateSelect  = $('#dateSelect').MPDatepicker();
       var eventGraph  = $('#graph').MPChart({chartType: 'line'});
@@ -45,6 +50,7 @@
       });
       propSelect.on('change', runQuery);
       dateSelect.on('change', runQuery);
+*/
     </script>
   </body>
 </html>
