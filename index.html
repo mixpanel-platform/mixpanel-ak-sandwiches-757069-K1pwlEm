@@ -17,6 +17,10 @@
     </div>
     <div id="table"></div>
     <script>
+    var eventTable  = $('#table').MPTable({
+        firstColHeader: 'Top 10 peeps'
+      });
+
       MP.api.people({where: 'properties["Purchases"] > 50'}).done(function(results) {
     eventTable.MPTable('setData', results);
 });
