@@ -18,7 +18,7 @@
     <div id="table"></div>
     <script>
       MP.api.people({where: 'properties["Purchases"] > 50'}).done(function(results) {
-    console.log(results.values());
+    eventTable.MPTable('setData', results);
 });
     </script>
     <script>
