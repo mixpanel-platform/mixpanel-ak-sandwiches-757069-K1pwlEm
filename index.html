@@ -22,7 +22,7 @@
       }); */
 
       MP.api.people({where: 'properties["Purchases"] > 50'}).done(function(results) {
-    console.log(results.values());
+    console.log(results.values()['results'][0]['$properties']['$name']);
 });
     </script>
     <script>
